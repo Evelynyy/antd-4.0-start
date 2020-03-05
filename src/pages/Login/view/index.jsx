@@ -1,13 +1,11 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { increment } from '../actions';
+import React, { Component } from 'react';
 
 import './index.less';
 
-import { Form, Input, Button, Checkbox } from 'antd';
+import { Form, Input, Button } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 
-class NormalLoginForm extends React.Component {
+class NormalLoginForm extends Component {
   onFinish = values => {
     console.log('Received values of form: ', values);
   };
@@ -51,7 +49,7 @@ class NormalLoginForm extends React.Component {
             placeholder="Password"
           />
         </Form.Item>
-        <Form.Item>
+        {/* <Form.Item>
           <Form.Item name="remember" valuePropName="checked" noStyle>
             <Checkbox>Remember me</Checkbox>
           </Form.Item>
@@ -59,7 +57,7 @@ class NormalLoginForm extends React.Component {
           <a className="login-form-forgot" href="">
             Forgot password
           </a>
-        </Form.Item>
+        </Form.Item> */}
 
         <Form.Item>
           <Button
@@ -69,17 +67,11 @@ class NormalLoginForm extends React.Component {
           >
             Log in
           </Button>
-          Or <a href="">register now!</a>
+          {/* Or <a href="">register now!</a> */}
         </Form.Item>
       </Form>
     );
   }
 }
-
-// export default function Index() {
-//   const dispatch = useDispatch();
-//   const { counter, summary } = useSelector(state => state.login);
-
-// }
 
 export default NormalLoginForm;
