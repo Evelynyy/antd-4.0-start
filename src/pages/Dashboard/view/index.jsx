@@ -1,11 +1,6 @@
-import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { increment } from "../actions";
+import React from 'react';
 
 export default function Index() {
-  const dispatch = useDispatch();
-  const { counter, summary } = useSelector(state => state.dashboard);
-
   return (
     <div>
       <div>
@@ -14,9 +9,6 @@ export default function Index() {
         neque at vitae minima adipisci quibusdam perferendis sed nesciunt unde
         ut.
       </div>
-      <div>{summary}</div>
-      <div>{counter}</div>
-      <button onClick={() => dispatch(increment())}>+</button>
     </div>
   );
 }
