@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 
 import './index.less';
 
@@ -6,8 +7,14 @@ import { Form, Input, Button, message } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 
 class NormalLoginForm extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
   onFinish = values => {
     if (values.username === 'admin' && values.password === 'admin') {
+      console.log(this.props);
       console.log(values);
       this.props.history.push('/dashboard');
     } else {
@@ -82,4 +89,4 @@ class NormalLoginForm extends Component {
   }
 }
 
-export default NormalLoginForm;
+export default withRouter(NormalLoginForm);
