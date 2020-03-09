@@ -19,6 +19,14 @@ const routesConfig = [
     }),
   },
   {
+    path: '/register',
+    name: 'register',
+    component: Loadable({
+      loader: () => import('../pages/Register'),
+      ...loading,
+    }),
+  },
+  {
     path: '/dashboard',
     name: 'dashboard',
     component: Loadable({

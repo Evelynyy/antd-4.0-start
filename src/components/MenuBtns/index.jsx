@@ -19,6 +19,9 @@ class MenuButtons extends Component {
   goToTablePage = () => {
     this.props.history.push('/table');
   };
+  goToRegisterPage = () => {
+    this.props.history.push('/register');
+  };
 
   render() {
     return (
@@ -31,6 +34,9 @@ class MenuButtons extends Component {
         </Button>
         <Button type="primary" onClick={this.goToTablePage}>
           Table
+        </Button>
+        <Button type="primary" onClick={this.goToRegisterPage}>
+          Register
         </Button>
       </div>
     );

@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
 
 import './index.less';
 
-import { Form, Input, Button, message } from 'antd';
+import { Form, Input, Button, message, Checkbox } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 
 class NormalLoginForm extends Component {
@@ -63,15 +62,15 @@ class NormalLoginForm extends Component {
               placeholder="Password"
             />
           </Form.Item>
-          {/* <Form.Item>
+          {/* <Form.Item> */}
           <Form.Item name="remember" valuePropName="checked" noStyle>
             <Checkbox>Remember me</Checkbox>
           </Form.Item>
 
-          <a className="login-form-forgot" href="">
-            Forgot password
-          </a>
-        </Form.Item> */}
+          {/* <a className="login-form-forgot" href="">
+              Forgot password
+            </a> */}
+          {/* </Form.Item> */}
 
           <Form.Item>
             <Button
@@ -81,7 +80,7 @@ class NormalLoginForm extends Component {
             >
               Log in
             </Button>
-            {/* Or <a href="">register now!</a> */}
+            Or <a href="/register">register now!</a>
           </Form.Item>
         </Form>
       </div>
@@ -89,4 +88,4 @@ class NormalLoginForm extends Component {
   }
 }
 
-export default withRouter(NormalLoginForm);
+export default NormalLoginForm;
